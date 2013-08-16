@@ -7,7 +7,7 @@ describe('resolve', function() {
       expect(resolve(__dirname + '/data/js/hello')).to.equal(__dirname + '/data/js/hello.js');
     });
     
-    it('should resolve to .js if CoffeeScript is not supported', function() {
+    it('should resolve to .js if .coffee is not supported', function() {
       expect(resolve(__dirname + '/data/coffee/hello')).to.equal(__dirname + '/data/coffee/hello.js');
     });
   });
@@ -27,7 +27,7 @@ describe('resolve', function() {
   });
   
   describe('with .js preferred over .coffee extension', function() {
-    it('should resolve to .js if .coffee file not available', function() {
+    it('should resolve to .js if available', function() {
       expect(resolve(__dirname + '/data/js/hello'), ['.js', '.coffee']).to.equal(__dirname + '/data/js/hello.js');
     });
     
@@ -37,6 +37,28 @@ describe('resolve', function() {
     
     it('should resolve to .js if both .js and .coffee are available', function() {
       expect(resolve(__dirname + '/data/js-coffee/hello', ['.js', '.coffee'])).to.equal(__dirname + '/data/js-coffee/hello.js');
+    });
+    
+    it('should resolve to existing file if extension given', function() {
+      expect(resolve(__dirname + '/data/js-coffee/hello.coffee', ['.coffee', '.js'])).to.equal(__dirname + '/data/js-coffee/hello.coffee');
+    });
+  });
+  
+  describe('with .coffee preferred over .js extension', function() {
+    it('should resolve to .coffee if available', function() {
+      expect(resolve(__dirname + '/data/coffee/hello', ['.coffee', '.js'])).to.equal(__dirname + '/data/coffee/hello.coffee');
+    });
+    
+    it('should resolve to .js if .coffee file not available', function() {
+      expect(resolve(__dirname + '/data/js/hello'), ['.coffee', '.js']).to.equal(__dirname + '/data/js/hello.js');
+    });
+    
+    it('should resolve to .coffee if both .coffee and .js are available', function() {
+      expect(resolve(__dirname + '/data/js-coffee/hello', ['.coffee', '.js'])).to.equal(__dirname + '/data/js-coffee/hello.coffee');
+    });
+    
+    it('should resolve to existing file if extension given', function() {
+      expect(resolve(__dirname + '/data/js-coffee/hello.js', ['.coffee', '.js'])).to.equal(__dirname + '/data/js-coffee/hello.js');
     });
   });
     
