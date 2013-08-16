@@ -1,0 +1,7 @@
+{
+  "name": "ts-example",
+  "version": "0.0.0",
+  "dependencies": {
+    "typescript-require": "0.2.x"
+  }
+}
