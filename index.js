@@ -1,6 +1,6 @@
 var path = require('path')
   , fs = require('fs')
-  , existsSync = fs.existsSync || path.existsSync // <=0.6
+  , existsSync = fs.existsSync || path.existsSync; // <=0.6
 
 
 exports.resolve = function(p, exts) {
@@ -21,4 +21,4 @@ exports.resolve = function(p, exts) {
   }
   
   return p + '.js';
-}
+};
