@@ -1,3 +1,5 @@
+/* global describe, it, expect */
+
 var resolve = require('..').resolve;
 
 describe('resolve', function() {
@@ -40,7 +42,7 @@ describe('resolve', function() {
     });
     
     it('should resolve to existing file if extension given', function() {
-      expect(resolve(__dirname + '/data/js-coffee/hello.coffee', ['.coffee', '.js'])).to.equal(__dirname + '/data/js-coffee/hello.coffee');
+      expect(resolve(__dirname + '/data/js-coffee/hello.coffee', ['.js', '.coffee'])).to.equal(__dirname + '/data/js-coffee/hello.coffee');
     });
   });
   

@@ -1,3 +1,5 @@
+/* global describe, it, expect */
+
 var scripts = require('..');
 
 describe('scripts', function() {

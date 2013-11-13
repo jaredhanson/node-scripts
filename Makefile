@@ -1,10 +1,11 @@
-SOURCES ?= lib/*.js
+SOURCES ?= *.js
 TESTS ?= test/*.test.js
 
 test: test-mocha
 test-cov: test-istanbul-mocha
 view-cov: view-istanbul-report
 lint: lint-jshint
+lint-tests: lint-tests-jshint
 
 
 # ==============================================================================
@@ -43,4 +44,4 @@ clean:
 clobber: clean clobber-node
 
 
-.PHONY: test test-cov view-cov lint submit-cov-to-coveralls ci-travis clean clobber
+.PHONY: test test-cov view-cov lint lint-tests submit-cov-to-coveralls ci-travis clean clobber
