@@ -2,6 +2,7 @@
 
 [![Build](https://travis-ci.org/jaredhanson/node-scripts.png)](https://travis-ci.org/jaredhanson/node-scripts)
 [![Coverage](https://coveralls.io/repos/jaredhanson/node-scripts/badge.png)](https://coveralls.io/r/jaredhanson/node-scripts)
+[![Quality](https://codeclimate.com/github/jaredhanson/node-scripts.png)](https://codeclimate.com/github/jaredhanson/node-scripts)
 [![Dependencies](https://david-dm.org/jaredhanson/node-scripts.png)](https://david-dm.org/jaredhanson/node-scripts)
 
 
