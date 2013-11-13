@@ -1,8 +1,8 @@
 # scripts
 
-[![Build](https://travis-ci.org/jaredhanson/node-scripts.png)](http://travis-ci.org/jaredhanson/node-scripts)
+[![Build](https://travis-ci.org/jaredhanson/node-scripts.png)](https://travis-ci.org/jaredhanson/node-scripts)
 [![Coverage](https://coveralls.io/repos/jaredhanson/node-scripts/badge.png)](https://coveralls.io/r/jaredhanson/node-scripts)
-[![Dependencies](https://david-dm.org/jaredhanson/node-scripts.png)](http://david-dm.org/jaredhanson/node-scripts)
+[![Dependencies](https://david-dm.org/jaredhanson/node-scripts.png)](https://david-dm.org/jaredhanson/node-scripts)
 
 
 Resolve scripts based on supported extensions.
